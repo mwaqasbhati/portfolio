@@ -479,6 +479,52 @@
 .mw-stat span { font-size: 13px; color: var(--mw-muted-dark); }
 
 /*--------------------------------------------------------------
+# Sidebar role line + persistent CTA
+--------------------------------------------------------------*/
+.header .nav-role {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #8ea1ba;
+  margin: -6px 0 14px;
+}
+
+.navmenu .nav-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 18px 10px 0;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #04121a;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--mw-accent), var(--mw-accent-deep));
+  box-shadow: 0 14px 32px -16px rgba(0, 180, 216, .9);
+  transition: transform .2s ease, box-shadow .25s ease;
+}
+
+.navmenu .nav-cta:hover {
+  transform: translateY(-2px);
+  color: #04121a;
+  box-shadow: 0 18px 38px -16px rgba(0, 180, 216, 1);
+}
+
+/* scrollspy marks this active alongside the Contact link — keep it looking like a button */
+.navmenu .nav-cta.active { color: #04121a; background: linear-gradient(135deg, var(--mw-accent), var(--mw-accent-deep)); }
+
+.navmenu .nav-cta-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #04121a;
+  opacity: .65;
+}
+
+/*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 .mw-about-grid {
