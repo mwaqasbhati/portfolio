@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MarkitMix Case Study — From an Idea to a Production Marketplace | Muhammad Waqas</title>
+  <meta name="description"
+    content="How MarkitMix went from a product concept to a live multi-vendor marketplace — product strategy, user journeys, multi-vendor checkout, auctions, AI, admin tooling and production deployment.">
+  <meta name="keywords" content="MarkitMix, multi-vendor marketplace, case study, full-stack product engineer, split payments, auctions, AWS ECS">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="MarkitMix — From an Idea to a Production Marketplace">
+  <meta property="og:description"
+    content="Owning the product journey across frontend, backend, payments, integrations, infrastructure and production.">
+  <meta property="og:image" content="assets/img/markitmix/hero-home.jpg">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/markitmix.css" rel="stylesheet">
+</head>
+
+<!--
+  LIVE PRODUCT
+  Web:     https://www.markitmix.shop/en
+  iOS:     https://apps.apple.com/us/app/markitmix-buy-sell-your-way/id6773596214
+  Android: https://play.google.com/store/apps/details?id=com.markitmix.app
+
+  METRICS: every [INSERT VERIFIED NUMBER] must be replaced with a verified figure or the tile removed.
+-->
+
+<body class="cs-page">
+
+  <div class="cs-progress" id="csProgress"></div>
+
+  <header class="cs-topbar">
+    <div class="cs-wrap">
+      <a href="index.html" class="cs-back"><i class="bi bi-arrow-left"></i> Muhammad Waqas</a>
+      <nav class="cs-topbar-nav">
+        <a href="#starting-point" class="cs-hide-sm">The problem</a>
+        <a href="#checkout" class="cs-hide-sm">Multi-vendor checkout</a>
+        <a href="#today" class="cs-hide-sm">Live product</a>
+        <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener" class="cs-hide-sm">markitmix.shop ↗</a>
+        <a href="#talk" style="color:#90e0ef;font-weight:600;">Let's talk →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="cs-hero">
+    <div class="cs-wrap">
+      <div class="cs-hero-grid">
+        <div>
+          <span class="cs-eyebrow" style="color:#90e0ef;">Case Study · MarkitMix · Multi-vendor marketplace</span>
+          <h1>From an Idea to a <em>Production Marketplace</em></h1>
+          <p class="cs-hero-sub">
+            How I helped turn MarkitMix from a product concept into a live multi-vendor marketplace — owning the
+            product journey across frontend, backend, payments, integrations, infrastructure and production.
+          </p>
+
+          <div class="cs-hero-ctas">
+            <a href="#talk" class="cs-btn cs-btn-primary">Let's talk about your product <i class="bi bi-arrow-right"></i></a>
+            <a href="#starting-point" class="cs-btn cs-btn-ghost">Explore the journey <i class="bi bi-arrow-down"></i></a>
+          </div>
+
+          <div class="cs-chiprow">
+            <span class="cs-chip">Multi-vendor checkout</span>
+            <span class="cs-chip">Split payments</span>
+            <span class="cs-chip">Live auctions</span>
+            <span class="cs-chip">Vendor &amp; admin tooling</span>
+            <span class="cs-chip">AI in the workflow</span>
+            <span class="cs-chip">AWS / Docker / ECS</span>
+          </div>
+
+          <div class="cs-platforms">
+            <span class="cs-platforms-label">Live on</span>
+            <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Web</a>
+            <a href="https://apps.apple.com/us/app/markitmix-buy-sell-your-way/id6773596214" target="_blank" rel="noopener"><i class="bi bi-apple"></i> App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.markitmix.app" target="_blank" rel="noopener"><i class="bi bi-google-play"></i> Google Play</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="cs-frame">
+            <div class="cs-frame-bar">
+              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+              <span class="cs-frame-url">markitmix.shop/en</span>
+            </div>
+            <div class="cs-frame-body">
+              <img data-shot data-shot-name="hero-home.jpg" src="assets/img/markitmix/hero-home.jpg"
+                alt="MarkitMix marketplace homepage">
+            </div>
+          </div>
+          <p class="cs-caption">The live MarkitMix marketplace — auctions, buy it now and offers in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 STARTING POINT ============ -->
+  <section class="cs-section cs-section--light" id="starting-point">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">01 — The starting point</span>
+        <h2 class="cs-h2">It started with a product idea, not a codebase.</h2>
+        <p class="cs-lead">
+          There was no backlog to work through and no design system to implement. There was a business that needed to
+          exist: sellers who wanted somewhere to list and sell, buyers who wanted to browse, bid and buy, and an
+          operator who needed to keep all of it running.
+        </p>
+        <p style="max-width:760px;">
+          The real challenge was never "build some screens". It was to make a marketplace business work end to end —
+          multiple vendors, their catalogues, customers, carts that mix sellers, auctions with real money attached,
+          payments that have to reach the right party, and the day-to-day operational workflows behind all of it.
+          Every screen had to sit on top of rules that made commercial sense first.
+        </p>
+      </div>
+
+      <div class="cs-flow cs-reveal">
+        <div class="cs-flow-step">
+          <span class="cs-step-n">START</span>
+          <strong>Business idea</strong>
+          <span class="cs-step-note">What is being sold, by whom, and how does the platform earn its place?</span>
+        </div>
+        <div class="cs-flow-step">
+          <span class="cs-step-n">STEP 02</span>
+          <strong>Product requirements</strong>
+          <span class="cs-step-note">Turning intent into concrete rules, roles and edge cases.</span>
+        </div>
+        <div class="cs-flow-step">
+          <span class="cs-step-n">STEP 03</span>
+          <strong>User journeys</strong>
+          <span class="cs-step-note">What a customer, a vendor and an admin each need to accomplish.</span>
+        </div>
+        <div class="cs-flow-step">
+          <span class="cs-step-n">STEP 04</span>
+          <strong>Technical architecture</strong>
+          <span class="cs-step-note">Data model, services, integrations and payment flow decided up front.</span>
+        </div>
+        <div class="cs-flow-step">
+          <span class="cs-step-n">LIVE</span>
+          <strong>Production product</strong>
+          <span class="cs-step-note">Deployed, monitored, used, and improved with real activity.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 IDEA → PRODUCT ============ -->
+  <section class="cs-section cs-section--soft" id="journeys">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">02 — Turning the idea into a product</span>
+        <h2 class="cs-h2">Turning requirements into real product flows</h2>
+        <p class="cs-lead">
+          Before writing features, the product was broken into the three journeys that actually generate value. A
+          marketplace only works when these three loops connect — a vendor listing has to become something a customer
+          can find, buy and receive, and something an operator can see and support.
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-3 cs-reveal">
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-person-heart"></i></div>
+          <h4>Customer journey</h4>
+          <div class="cs-pipeline">
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
+              <div class="cs-pipe-body"><h4>Discover &amp; browse</h4><p>Find products across every vendor in one catalogue.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
+              <div class="cs-pipe-body"><h4>Product &amp; auction</h4><p>Buy at a fixed price or place a bid on a live listing.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
+              <div class="cs-pipe-body"><h4>Cart &amp; checkout</h4><p>One cart, even when the items come from different sellers.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
+              <div class="cs-pipe-body"><h4>Payment &amp; order</h4><p>One payment, correctly attributed behind the scenes.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-shop"></i></div>
+          <h4>Vendor journey</h4>
+          <div class="cs-pipeline">
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
+              <div class="cs-pipe-body"><h4>Register &amp; onboard</h4><p>Become an approved seller on the platform.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
+              <div class="cs-pipe-body"><h4>Products &amp; listings</h4><p>Create, price and maintain their own catalogue.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
+              <div class="cs-pipe-body"><h4>Auctions</h4><p>Put items up for bidding and follow them to close.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
+              <div class="cs-pipe-body"><h4>Orders &amp; business</h4><p>Receive orders and run their storefront day to day.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-sliders2"></i></div>
+          <h4>Admin journey</h4>
+          <div class="cs-pipeline">
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
+              <div class="cs-pipe-body"><h4>Monitor marketplace</h4><p>See what is happening across the whole platform.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
+              <div class="cs-pipe-body"><h4>Manage vendors</h4><p>Approve, review and support the sellers on board.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
+              <div class="cs-pipe-body"><h4>Products &amp; orders</h4><p>Step in when a listing or an order needs attention.</p></div>
+            </div>
+            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
+              <div class="cs-pipe-body"><h4>Platform activity</h4><p>Keep marketplace operations under control.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-lead cs-reveal" style="margin-top:44px;max-width:780px;">
+        The goal was never a set of isolated screens. Every step above hands something to the next one — a vendor
+        action changes what a customer sees, a customer action creates work for a vendor, and the admin view has to
+        reflect both at any moment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 03 BUILDING THE MARKETPLACE ============ -->
+  <section class="cs-section cs-section--light" id="build">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">03 — Building the core</span>
+        <h2 class="cs-h2">Building the core marketplace</h2>
+        <p class="cs-lead">
+          Each part of the platform existed to solve a specific problem. Here is what that looked like in practice.
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal" style="margin-bottom:40px;">
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-diagram-3"></i></div>
+          <h4>Multi-vendor foundation</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Every product, order and payout has to be traceable to the vendor it belongs to.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>Vendor ownership was built into the data model from day one rather than bolted on later.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>Vendors operate independently while customers experience a single marketplace.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-box-seam"></i></div>
+          <h4>Catalogue &amp; product management</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Many sellers describe products differently, which makes browsing inconsistent.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>A shared product structure with vendor-controlled listings, media and pricing.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>One coherent catalogue that any approved vendor can contribute to.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-shield-lock"></i></div>
+          <h4>Accounts &amp; authentication</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Customers, vendors and admins need very different access to the same platform.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>Role-based authentication and authorisation enforced on the server, not just in the UI.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>Each role sees and can act on exactly what it should.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-receipt"></i></div>
+          <h4>Orders &amp; checkout</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>A single customer purchase can create obligations for several different businesses.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>Orders were modelled so a purchase can be split and tracked per vendor.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>Simple for the buyer, unambiguous for the seller and the operator.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-plug"></i></div>
+          <h4>APIs &amp; integrations</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Payments, storage, notifications and AI services all had to work together reliably.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>A clean API layer so third-party services could be added and changed without rewrites.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>New capabilities can be introduced without destabilising the marketplace.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-phone"></i></div>
+          <h4>Responsive web experience</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Buyers and sellers show up on phones as often as on desktops.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Approach</span><p>The buying, selling and bidding flows were designed to work at any screen size.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Result</span><p>The full marketplace is usable wherever the user happens to be.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal">
+        <div>
+          <div class="cs-frame">
+            <div class="cs-frame-bar">
+              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+              <span class="cs-frame-url">markitmix.shop — browse &amp; filter</span>
+            </div>
+            <div class="cs-frame-body">
+              <img data-shot data-shot-name="catalogue.jpg" src="assets/img/markitmix/catalogue.jpg"
+                alt="MarkitMix category browsing with filters">
+            </div>
+          </div>
+          <p class="cs-caption">One catalogue, many sellers — filtered by category, format, fulfilment and price.</p>
+        </div>
+        <div>
+          <div class="cs-frame">
+            <div class="cs-frame-bar">
+              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+              <span class="cs-frame-url">markitmix.shop — listing detail</span>
+            </div>
+            <div class="cs-frame-body">
+              <img data-shot data-shot-name="product-detail.jpg" src="assets/img/markitmix/product-detail.jpg"
+                alt="MarkitMix listing detail with seller, bidding and fulfilment options">
+            </div>
+          </div>
+          <p class="cs-caption">Listing detail: the seller, their rating, bidding and shipping or local pickup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 MULTI-VENDOR CHECKOUT ============ -->
+  <section class="cs-section cs-section--dark" id="checkout">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">04 — The hard part</span>
+        <h2 class="cs-h2">One checkout. Multiple vendors.</h2>
+        <p class="cs-lead">
+          This is where a marketplace stops behaving like a shop. A customer fills a single cart without caring who
+          sells what — but the moment they pay, that one transaction has to be understood as several separate pieces of
+          business, each belonging to a different vendor.
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal" style="align-items:start;gap:44px;">
+        <div>
+          <h3 class="cs-h3">The business problem</h3>
+          <p style="color:#a8bad2;">
+            If a buyer adds three items from three different sellers, the platform needs to know exactly which product
+            belongs to which vendor, create the right order records for each of them, take one payment from the
+            customer, and then make sure the money is distributed to the correct parties — with the platform's own
+            position accounted for.
+          </p>
+          <p style="color:#a8bad2;">
+            Get it wrong and you do not get a bug report. You get an angry seller who was not paid, or a buyer charged
+            for something nobody is fulfilling.
+          </p>
+
+          <h3 class="cs-h3" style="margin-top:34px;">What I designed and built</h3>
+          <p style="color:#a8bad2;">
+            I designed and implemented the multi-vendor checkout and split-payment flow: cart items resolved back to
+            their vendors, orders derived per vendor from a single purchase, and payment distribution handled as part
+            of the order lifecycle instead of as a manual back-office chore. The flow was designed to operate with
+            <strong style="color:#fff;">50+ vendors</strong> on the platform.
+          </p>
+          <div class="cs-chiprow" style="margin-top:22px;">
+            <span class="cs-chip">Cart → vendor resolution</span>
+            <span class="cs-chip">Per-vendor order creation</span>
+            <span class="cs-chip">Single customer payment</span>
+            <span class="cs-chip">Split distribution</span>
+          </div>
+        </div>
+
+        <div class="cs-split-visual">
+          <div class="cs-split-row">
+            <div class="cs-node cs-node--accent"><strong>Customer</strong><small>Buys whatever they want</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>Single cart</strong><small>Items from different sellers, one checkout</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-fan">
+              <div class="cs-node"><strong>Vendor A</strong><small>2 items</small></div>
+              <div class="cs-node"><strong>Vendor B</strong><small>1 item</small></div>
+              <div class="cs-node"><strong>Vendor C</strong><small>1 item</small></div>
+            </div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>Order processing</strong><small>Each vendor gets the order that belongs to them</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node cs-node--accent"><strong>Vendor-specific payment distribution</strong><small>One payment in, correctly split out</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 AUCTIONS ============ -->
+  <section class="cs-section cs-section--light" id="auctions">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">05 — Auctions</span>
+        <h2 class="cs-h2">From marketplace listings to live auctions</h2>
+        <p class="cs-lead">
+          Auctions were not a side feature. They gave vendors a second way to sell and gave the marketplace a reason
+          for customers to come back — but they had to land in exactly the same order and payment machinery as a normal
+          purchase.
+        </p>
+      </div>
+
+      <div class="cs-flow cs-reveal" style="margin-bottom:44px;">
+        <div class="cs-flow-step"><span class="cs-step-n">01</span><strong>Create auction</strong><span class="cs-step-note">A vendor puts an item up with its terms.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">02</span><strong>Goes live</strong><span class="cs-step-note">The listing appears in the marketplace.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">03</span><strong>Customers bid</strong><span class="cs-step-note">Bidding activity is tracked against the listing.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">04</span><strong>Auction ends</strong><span class="cs-step-note">The close is handled by the system, not by hand.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">05</span><strong>Winner</strong><span class="cs-step-note">The winning bid becomes a real commitment.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">06</span><strong>Order &amp; payment</strong><span class="cs-step-note">It enters the same checkout and payment flow.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">07</span><strong>Fulfilment</strong><span class="cs-step-note">The vendor delivers, the platform tracks it.</span></div>
+      </div>
+
+      <div class="cs-reveal">
+        <div class="cs-frame cs-frame--tall">
+          <div class="cs-frame-bar">
+            <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+            <span class="cs-frame-url">markitmix.shop — live listings</span>
+          </div>
+          <div class="cs-frame-body">
+            <img data-shot data-shot-name="auctions.jpg" src="assets/img/markitmix/auctions.jpg"
+              alt="MarkitMix live auction and buy-it-now listings with countdowns">
+          </div>
+        </div>
+        <p class="cs-caption">Auctions and buy-it-now listings running side by side, each counting down to close.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 CONTROL CENTER ============ -->
+  <section class="cs-section cs-section--soft" id="control-center">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">06 — The business control center</span>
+        <h2 class="cs-h2">Building the tools behind the marketplace</h2>
+        <p class="cs-lead">
+          A marketplace is not the website customers see. Most of the work of running one happens in the tools nobody
+          outside the business ever looks at — and if those tools do not exist, the team ends up doing the platform's
+          job manually.
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-3 cs-reveal" style="margin-bottom:44px;">
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-people"></i></div><h4>Vendor management</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Onboard, review and manage the sellers operating on the platform.</p></div>
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-grid-3x3-gap"></i></div><h4>Product oversight</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Keep the catalogue accurate across every vendor contributing to it.</p></div>
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-bag-check"></i></div><h4>Order management</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Follow orders through their lifecycle and intervene when needed.</p></div>
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-activity"></i></div><h4>Marketplace monitoring</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">See platform activity as it happens instead of finding out later.</p></div>
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-gear"></i></div><h4>Platform operations</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Control the settings and rules the marketplace runs on.</p></div>
+        <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-arrow-repeat"></i></div><h4>Business workflows</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Turn recurring manual work into something the system handles.</p></div>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal">
+        <div>
+          <div class="cs-frame">
+            <div class="cs-frame-bar">
+              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+              <span class="cs-frame-url">markitmix.shop — seller dashboard</span>
+            </div>
+            <div class="cs-frame-body">
+              <img data-shot data-shot-name="vendor-dashboard.jpg" class="cs-shot--left"
+                src="assets/img/markitmix/vendor-dashboard.jpg"
+                alt="MarkitMix seller dashboard with listings, orders, finances and analytics">
+            </div>
+          </div>
+          <p class="cs-caption">The seller dashboard — listings, drops, orders, offers, finances, disputes and analytics.</p>
+        </div>
+        <div>
+          <div class="cs-frame">
+            <div class="cs-frame-bar">
+              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+              <span class="cs-frame-url">markitmix.shop — seller storefront</span>
+            </div>
+            <div class="cs-frame-body">
+              <img data-shot data-shot-name="vendor-shop.jpg" src="assets/img/markitmix/vendor-shop.jpg"
+                alt="MarkitMix seller storefront with drop collections and featured listings">
+            </div>
+          </div>
+          <p class="cs-caption">Each vendor gets a real storefront — profile, reviews, scheduled drops and featured items.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 AI ============ -->
+  <section class="cs-section cs-section--dark" id="ai">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">07 — AI where it adds value</span>
+        <h2 class="cs-h2">AI as part of the product — not just a chatbot</h2>
+        <p class="cs-lead">
+          AI was introduced into MarkitMix where it removed real friction from a workflow, using OpenAI and Claude.
+          Every integration had to answer the same question first: what would a person otherwise have to do manually,
+          and is a model genuinely better at it?
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal">
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-pencil-square"></i></div>
+          <h4>Helping vendors create better listings</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Sellers are good at sourcing products, not at writing product copy — so listings arrive thin and inconsistent.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Why AI</span><p>Turning a few facts about an item into clear, consistent listing content is exactly what language models do well.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">In product</span><p>Built into the listing workflow itself, so the vendor gets help at the moment they are creating the item — with the vendor still in control of the final text.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card-icon"><i class="bi bi-search-heart"></i></div>
+          <h4>Making a mixed catalogue easier to navigate</h4>
+          <div class="cs-par">
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>When 50+ vendors describe products in their own words, browsing and searching becomes uneven for the customer.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Why AI</span><p>Models can interpret messy, free-form product information and bring structure to it at scale.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">In product</span><p>Applied inside the catalogue flow so customers get a more coherent marketplace without vendors changing how they work.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-lead cs-reveal" style="margin-top:40px;max-width:760px;">
+        The principle stayed the same throughout: <strong style="color:#fff;">AI is useful when it improves a real
+        business workflow.</strong> Anything that could not be tied back to a workflow did not make it into the product.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 08 TO PRODUCTION ============ -->
+  <section class="cs-section cs-section--light" id="production">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">08 — From local development to production</span>
+        <h2 class="cs-h2">Getting the product live</h2>
+        <p class="cs-lead">
+          A product that only runs on a laptop is not a product. Getting MarkitMix in front of real vendors and
+          customers meant owning the path from source code to a running, reachable, healthy system.
+        </p>
+      </div>
+
+      <div class="cs-flow cs-reveal" style="margin-bottom:44px;">
+        <div class="cs-flow-step"><span class="cs-step-n">01</span><strong>GitHub</strong><span class="cs-step-note">Source of truth for every change.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">02</span><strong>Build</strong><span class="cs-step-note">Changes are built into a releasable artefact.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">03</span><strong>Docker</strong><span class="cs-step-note">The app is packaged to run identically anywhere.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">04</span><strong>AWS / ECS</strong><span class="cs-step-note">Containers run on managed cloud infrastructure.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">05</span><strong>Deployment</strong><span class="cs-step-note">New versions replace old ones in a controlled way.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">06</span><strong>Health check</strong><span class="cs-step-note">The platform verifies the release is actually serving.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">07</span><strong>Production</strong><span class="cs-step-note">Live, reachable, and used by real people.</span></div>
+      </div>
+
+      <div class="cs-narrow cs-reveal" style="width:100%;max-width:820px;margin-left:0;">
+        <h3 class="cs-h3">What this meant in practice</h3>
+        <p style="color:var(--cs-muted);">
+          I was involved in getting the system deployed and running as a real product — containerising the
+          application, getting it onto AWS, making deployments repeatable, and dealing with the issues that only
+          appear once something is live and being used rather than demoed.
+        </p>
+        <p style="color:var(--cs-muted);">
+          For a founder, the practical meaning is simple: shipping was not treated as someone else's problem at the
+          end of the project.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09 THE PRODUCT TODAY ============ -->
+  <section class="cs-section cs-section--dark" id="today">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">09 — The product today</span>
+        <h2 class="cs-h2">This isn't just a demo. It's a live product.</h2>
+        <p class="cs-lead">
+          MarkitMix is live at <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener"
+            style="color:#90e0ef;">markitmix.shop</a> and shipping on iOS and Android — real sellers, real listings,
+          real bids and the real operational work that comes with them.
+        </p>
+      </div>
+
+      <div class="cs-links cs-reveal">
+        <a class="cs-link-card" href="https://www.markitmix.shop/en" target="_blank" rel="noopener">
+          <i class="bi bi-globe2"></i>
+          <div><strong>markitmix.shop</strong><span>The live marketplace on the web</span></div>
+          <i class="bi bi-arrow-up-right cs-link-go"></i>
+        </a>
+        <a class="cs-link-card" href="https://apps.apple.com/us/app/markitmix-buy-sell-your-way/id6773596214"
+          target="_blank" rel="noopener">
+          <i class="bi bi-apple"></i>
+          <div><strong>App Store</strong><span>MarkitMix: Buy &amp; Sell Your Way</span></div>
+          <i class="bi bi-arrow-up-right cs-link-go"></i>
+        </a>
+        <a class="cs-link-card" href="https://play.google.com/store/apps/details?id=com.markitmix.app"
+          target="_blank" rel="noopener">
+          <i class="bi bi-google-play"></i>
+          <div><strong>Google Play</strong><span>com.markitmix.app</span></div>
+          <i class="bi bi-arrow-up-right cs-link-go"></i>
+        </a>
+      </div>
+
+      <!-- Replace each [INSERT VERIFIED NUMBER] with a verified figure, or remove that tile. -->
+      <div class="cs-metrics cs-reveal" style="margin-top:26px;">
+        <div class="cs-metric"><span class="cs-metric-v">50+</span><span class="cs-metric-l">Vendors supported by the platform design</span></div>
+        <div class="cs-metric"><span class="cs-metric-v">3</span><span class="cs-metric-l">Platforms live: web, iOS and Android</span></div>
+        <div class="cs-metric"><span class="cs-metric-v cs-placeholder">[INSERT VERIFIED NUMBER]</span><span class="cs-metric-l">Active listings</span></div>
+        <div class="cs-metric"><span class="cs-metric-v cs-placeholder">[INSERT VERIFIED NUMBER]</span><span class="cs-metric-l">Orders processed</span></div>
+      </div>
+
+      <div class="cs-reveal" style="margin-top:46px;">
+        <div class="cs-frame cs-frame--tall">
+          <div class="cs-frame-bar">
+            <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+            <span class="cs-frame-url">markitmix.shop — seller storefront</span>
+          </div>
+          <div class="cs-frame-body">
+            <img data-shot data-shot-name="vendor-shop.jpg" src="assets/img/markitmix/vendor-shop.jpg"
+              alt="A live MarkitMix seller storefront">
+          </div>
+        </div>
+        <p class="cs-caption">A real seller operating on the platform today.</p>
+      </div>
+
+      <div class="cs-reveal" style="text-align:center;margin-top:40px;">
+        <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener" class="cs-btn cs-btn-primary">Visit
+          MarkitMix <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 WHAT I OWNED ============ -->
+  <section class="cs-section cs-section--light" id="ownership">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">10 — What I actually owned</span>
+        <h2 class="cs-h2">More than writing the code</h2>
+        <p class="cs-lead">
+          I worked as a full-stack/product engineer across the entire product lifecycle — from understanding what the
+          business needed, through building it, to keeping it running once it was real.
+        </p>
+      </div>
+
+      <div class="cs-own cs-reveal">
+        <div class="cs-own-item"><i class="bi bi-lightbulb"></i><div><strong>Product understanding</strong><span>What the business needs before what the code does.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-diagram-2"></i><div><strong>Architecture</strong><span>How the pieces fit and where the risk sits.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-window"></i><div><strong>Frontend</strong><span>The customer, vendor and admin experiences.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-hdd-stack"></i><div><strong>Backend</strong><span>The rules and services the marketplace runs on.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-database"></i><div><strong>Database</strong><span>The data model behind vendors, orders and listings.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-credit-card"></i><div><strong>Payments</strong><span>Multi-vendor checkout and split distribution.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-plug"></i><div><strong>Integrations</strong><span>Third-party services wired into real workflows.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-stars"></i><div><strong>AI</strong><span>OpenAI and Claude applied where they help.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-sliders"></i><div><strong>Admin &amp; vendor tooling</strong><span>The operational side of the product.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-cloud-arrow-up"></i><div><strong>Deployment</strong><span>Docker, AWS/ECS and repeatable releases.</span></div></div>
+        <div class="cs-own-item"><i class="bi bi-broadcast"></i><div><strong>Production</strong><span>Solving the problems that only appear once live.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 WHAT I LEARNED ============ -->
+  <section class="cs-section cs-section--dark" id="learned">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">11 — What I learned</span>
+        <h2 class="cs-h2">What building MarkitMix taught me</h2>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal">
+        <div class="cs-lesson"><h4>A marketplace is much more than a storefront.</h4><p>The visible shop is the small part. The business rules connecting buyers, sellers and money are the product.</p></div>
+        <div class="cs-lesson"><h4>Business rules need designing before they become code.</h4><p>Decisions made casually early on become expensive to unwind once vendors and orders depend on them.</p></div>
+        <div class="cs-lesson"><h4>Multi-vendor payments are a product decision, not just an engineering one.</h4><p>How money splits, when it moves and who is accountable shapes the architecture as much as the code does.</p></div>
+        <div class="cs-lesson"><h4>Operational tooling matters as much as the customer experience.</h4><p>Without good admin and vendor tools, the team becomes the missing feature — manually.</p></div>
+        <div class="cs-lesson"><h4>AI should solve a workflow problem, not exist for its own sake.</h4><p>The useful integrations were the ones that replaced tedious work people were already doing.</p></div>
+        <div class="cs-lesson"><h4>Getting an MVP live is only the beginning.</h4><p>Real usage exposes the problems actually worth solving — the ones you could never have prioritised from a spec.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="cs-section cs-final" id="talk">
+    <div class="cs-wrap">
+      <div class="cs-reveal">
+        <span class="cs-eyebrow" style="color:#90e0ef;">Let's build yours</span>
+        <h2>Have an idea, MVP, or product that needs to become real?</h2>
+        <p class="cs-lead" style="max-width:720px;">
+          I help founders turn product ideas into production-ready software — from early product thinking and
+          architecture through full-stack development, integrations, AI, deployment and ongoing improvement.
+        </p>
+        <div class="cs-hero-ctas" style="margin-top:34px;">
+          <a href="index.html#contact" class="cs-btn cs-btn-primary">Let's talk about your product <i class="bi bi-arrow-right"></i></a>
+          <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener" class="cs-btn cs-btn-ghost">View
+            MarkitMix live <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cs-foot">
+    <div class="cs-wrap">
+      © <span id="csYear"></span> Muhammad Waqas · <a href="index.html">Portfolio</a> ·
+      <a href="https://linkedin.com/in/mwaqasbhati" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Reading-progress bar
+      var bar = document.getElementById('csProgress');
+      function progress() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+      }
+      document.addEventListener('scroll', progress, { passive: true });
+      progress();
+
+      // Reveal on scroll
+      var items = document.querySelectorAll('.cs-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            // reveal anything in view, or already scrolled past via an anchor jump
+            if (e.isIntersecting || e.boundingClientRect.top < 0) {
+              e.target.classList.add('is-in'); io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('is-in'); });
+      }
+
+      // Screenshot placeholders until real images are added to assets/img/markitmix/
+      function placeholder(img) {
+        if (img.dataset.csHandled) return;
+        img.dataset.csHandled = '1';
+        var name = img.getAttribute('data-shot-name') || 'screenshot.png';
+        var box = document.createElement('div');
+        box.className = 'cs-shot-missing';
+        var icon = document.createElement('i');
+        icon.className = 'bi bi-image';
+        var label = document.createElement('span');
+        label.textContent = 'MarkitMix screenshot';
+        var code = document.createElement('code');
+        code.textContent = 'assets/img/markitmix/' + name;
+        box.appendChild(icon); box.appendChild(label); box.appendChild(code);
+        img.replaceWith(box);
+      }
+
+      document.querySelectorAll('img[data-shot]').forEach(function (img) {
+        img.addEventListener('error', function () { placeholder(img); });
+        if (img.complete && img.naturalWidth === 0) placeholder(img);
+      });
+
+      document.getElementById('csYear').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+
+</html>

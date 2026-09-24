@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Muhammad Waqas - Lead Mobile Engineer</title>
-  <meta content="Portfolio of Muhammad Waqas, Lead Mobile Engineer specializing in iOS and Flutter development." name="description">
-  <meta content="Muhammad Waqas, iOS, Flutter, Mobile Development, Dubai, Portfolio" name="keywords">
+  <title>Muhammad Waqas — Senior Full-Stack &amp; Product Engineer</title>
+  <meta content="Muhammad Waqas — senior full-stack and product engineer with 12+ years building products end to end: mobile, web, backend, payments, AI/ML and cloud." name="description">
+  <meta content="Muhammad Waqas, Full-Stack Engineer, Product Engineer, iOS, Swift, Flutter, Node, AI ML, Marketplace, Payments, Dubai" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -25,6 +25,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/markitmix.css" rel="stylesheet">
+  <link href="assets/css/modern.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -38,13 +40,16 @@
     </a>
     <div class="social-links text-center">
       <a href="https://linkedin.com/in/mwaqasbhati" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/mwaqasbhati" class="github"><i class="bi bi-github"></i></a>
     </div>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-stack navicon"></i> What I Build</a></li>
+        <li><a href="#case-study"><i class="bi bi-award navicon"></i> Case Study</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Work</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
@@ -53,165 +58,75 @@
 
   <main class="main">
     <!-- Hero Section -->
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Muhammad Waqas - Hero Section</title>
-      <style>
-        /* General styling for the hero section */
-        .hero {
-          position: relative;
-          padding: 100px 0;
-          text-align: center;
-          background: #1a1a1a; /* Dark background */
-          color: #fff;
-          overflow: hidden;
-        }
-    
-        .hero img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: 0.1; /* Subtle background image */
-          z-index: 0;
-        }
-    
-        .container {
-          position: relative;
-          z-index: 1;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-    
-        .hero h2 {
-          font-size: 3rem;
-          font-weight: 700;
-          margin-bottom: 10px;
-          color: #00b4d8; /* Vibrant cyan for name */
-          text-transform: uppercase;
-          letter-spacing: 2px;
-        }
-    
-        .hero p {
-          font-size: 1.5rem;
-          margin-bottom: 30px;
-        }
-    
-        .hero .typed {
-          color: #90e0ef; /* Lighter cyan for emphasis */
-          font-weight: bold;
-        }
-    
-        /* Why Choose Me Section Styling */
-        .why-choose-me {
-          background: rgba(255, 255, 255, 0.05); /* Slight translucent white */
-          padding: 30px;
-          border-radius: 15px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-          max-width: 800px;
-          margin: 0 auto;
-          transition: transform 0.3s ease;
-        }
-    
-        .why-choose-me:hover {
-          transform: translateY(-10px); /* Subtle hover lift effect */
-        }
-    
-        .why-choose-me h3 {
-          font-size: 2rem;
-          color: #00b4d8;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-        }
-    
-        .why-choose-me p {
-          font-size: 1.2rem;
-          color: #d9d9d9;
-          margin-bottom: 20px;
-        }
-    
-        .why-choose-me ul {
-          list-style: none;
-          padding: 0;
-          text-align: left;
-        }
-    
-        .why-choose-me ul li {
-          font-size: 1.1rem;
-          color: #fff;
-          margin-bottom: 15px;
-          position: relative;
-          padding-left: 25px;
-          line-height: 1.5;
-        }
-    
-        .why-choose-me ul li:before {
-          content: "✔";
-          color: #00b4d8;
-          position: absolute;
-          left: 0;
-          font-size: 1.2rem;
-        }
-    
-        .why-choose-me ul li strong {
-          color: #90e0ef; /* Highlight regions */
-        }
-    
-        /* Responsive Design */
-        @media (max-width: 768px) {
-          .hero h2 {
-            font-size: 2rem;
-          }
-          .hero p, .why-choose-me p {
-            font-size: 1rem;
-          }
-          .why-choose-me h3 {
-            font-size: 1.5rem;
-          }
-          .why-choose-me ul li {
-            font-size: 0.95rem;
-          }
-        }
-      </style>
-    </head>
-    <body>
-      <section id="hero" class="hero section dark-background">
-        <img src="assets/img/hero-bg.svg" alt="" data-aos="fade-in">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2>Muhammad Waqas</h2>
-          <div class="why-choose-me">
-            <h3>Why Choose Me?</h3>
-            <p>Versatile experience across 4 regions, delivering 25+ apps with 2M+ downloads and $2B in transactions.</p>
-            <ul>
-              <li><strong>USA (New York, San Francisco)</strong> - Entrupy Inc. & Rydite: Built ML-powered SDKs and optimized performance.</li>
-              <li><strong>UK</strong> - Index.dev: Staffed IT talent for a global firm.</li>
-              <li><strong>UAE (Dubai)</strong> - Emaar & Digital Dubai: Led Dubai Now and The Dubai Mall apps, serving millions.</li>
-              <li><strong>Pakistan</strong> - Netsol Technologies: Gained foundational expertise.</li>
-            </ul>
+    <section id="hero" class="mw-hero section">
+      <div class="container">
+        <div class="mw-hero-grid">
+          <div data-aos="fade-up">
+            <span class="mw-kicker">Senior Full-Stack &amp; Product Engineer · 12+ years</span>
+            <h1>I take products from <em>idea to production</em> — and keep them running.</h1>
+            <p class="mw-hero-sub">
+              I work across the whole product: user journeys, mobile and web frontends, backend and data,
+              payments, AI integrations, admin tooling and cloud deployment. Currently building
+              <span class="typed" data-typed-items="multi-vendor marketplaces, AI-powered mobile apps, payment and checkout flows, production-ready MVPs"></span>
+            </p>
+            <div class="mw-ctas">
+              <a href="markitmix-case-study.html" class="cs-btn cs-btn-primary">See how I built MarkitMix <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="cs-btn cs-btn-ghost">Let's talk about your product <i class="bi bi-chat-dots"></i></a>
+            </div>
+            <div class="mw-stats">
+              <div class="mw-stat"><strong>12+</strong><span>Years shipping software</span></div>
+              <div class="mw-stat"><strong>25+</strong><span>Apps on the App Store &amp; Google Play</span></div>
+              <div class="mw-stat"><strong>4</strong><span>Regions worked across</span></div>
+              <div class="mw-stat"><strong>End&#8209;to&#8209;end</strong><span>Product, build, launch, operate</span></div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" data-aos-delay="150">
+            <div class="mw-hero-card">
+              <h3>Where I've built</h3>
+              <div class="mw-region">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><strong>USA — New York &amp; San Francisco</strong><span>Entrupy &amp; Rydite: ML-powered mobile SDKs and performance work.</span></div>
+              </div>
+              <div class="mw-region">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><strong>UAE — Dubai</strong><span>Emaar &amp; Digital Dubai: large-scale consumer apps serving millions.</span></div>
+              </div>
+              <div class="mw-region">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><strong>UK</strong><span>Index.dev: engineering for a distributed global team.</span></div>
+              </div>
+              <div class="mw-region">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><strong>Pakistan</strong><span>Netsol Technologies: where the engineering foundation was built.</span></div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </body>
+      </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>With 9 years of experience in iOS and 3 years in Flutter app development, I have mastered analysis, architecture, design, development, and deployment, adhering to app store guidelines.</p>
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">About</span>
+          <h2>I don't just build from tickets. I build products.</h2>
+          <p>Twelve years of shipping software — most of it owning the part where a business idea has to become
+            something real people use every day.</p>
+        </div>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
+            <img src="assets/img/my-profile-img.png" class="img-fluid" alt="Muhammad Waqas">
           </div>
           <div class="col-lg-8 content">
-            <h2>Lead Developer & Mobile Architect</h2>
+            <h2>Senior Full-Stack &amp; Product Engineer</h2>
             <p class="fst-italic py-3">
-              Published 25 apps on the App Store and Google Play Store, worked on projects with 2 million downloads and $2 billion in yearly transactions.
+              I started in mobile — Swift, SwiftUI, Objective-C, then Flutter — and grew into the rest of the
+              product: the APIs behind the screens, the data model underneath, the payments, the AI pieces, the
+              admin tools the business runs on, and the cloud setup that keeps it all live.
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -224,7 +139,7 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>9+ years iOS, 3+ years Flutter</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>12+ years across mobile, web, backend &amp; cloud</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's in Software Engineering</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://linkedin.com/in/mwaqasbhati">linkedin.com/in/mwaqasbhati</a></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
@@ -232,95 +147,121 @@
               </div>
             </div>
             <p class="py-3">
-              An active contributor to open-source communities on GitHub and Stack Overflow, I bring adaptability from professional experiences in three countries. My background combines technical expertise with a global perspective, making me an asset in any tech-driven environment.
+              Most recently I built <a href="markitmix-case-study.html">MarkitMix</a>, a live multi-vendor
+              marketplace with auctions, offers, buy-it-now and split payments across web, iOS and Android — from
+              the first product conversation through to running it in production. That is the kind of work I look
+              for: a founder with an idea or an MVP that needs someone who can own the whole thing.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Apps Published</strong> <span>App Store & Google Play</span></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3000000" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Downloads</strong> <span>Across Projects</span></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="200000000" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Transactions</strong> <span>Yearly ($2B)</span></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Team Size</strong> <span>Led Developers</span></p>
-            </div>
-          </div>
+
+    <!-- What I Build Section -->
+    <section id="skills" class="skills section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">What I build</span>
+          <h2>Full-stack, in the way founders actually need it</h2>
+          <p>Not a list of logos. These are the layers I can take responsibility for on a product, and the tools I
+            reach for when I do.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Technical Expertise</h2>
-        <p>Comprehensive skills in iOS, Flutter, backend, and security domains.</p>
-      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation">
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill"><span>iOS Development</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill"><span>Flutter</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill"><span>Backend</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+        <div class="mw-cap-grid">
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-lightbulb"></i></div>
+            <h3>Product &amp; architecture</h3>
+            <p>Turning a business idea into user journeys, rules and a system design before any code is written.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Product discovery</span><span class="mw-tag">User journeys</span>
+              <span class="mw-tag">System design</span><span class="mw-tag">MVP scoping</span>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill"><span>Security</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-phone"></i></div>
+            <h3>Mobile</h3>
+            <p>Native iOS and cross-platform apps built to pass review and survive real users.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Swift</span><span class="mw-tag">SwiftUI</span>
+              <span class="mw-tag">Objective-C</span><span class="mw-tag">Flutter</span>
+              <span class="mw-tag">Dart</span><span class="mw-tag">Riverpod</span>
+              <span class="mw-tag">Bloc</span><span class="mw-tag">MVVM</span>
             </div>
-            <div class="progress">
-              <span class="skill"><span>Microservices</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-window"></i></div>
+            <h3>Web frontend</h3>
+            <p>Customer-facing web experiences plus the vendor and admin interfaces behind them.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">React</span><span class="mw-tag">Next.js</span>
+              <span class="mw-tag">TypeScript</span><span class="mw-tag">Responsive UI</span>
             </div>
-            <div class="progress">
-              <span class="skill"><span>CI/CD</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-hdd-stack"></i></div>
+            <h3>Backend &amp; data</h3>
+            <p>The APIs, business rules and data model a product actually runs on.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Node.js</span><span class="mw-tag">REST APIs</span>
+              <span class="mw-tag">PostgreSQL</span><span class="mw-tag">Firebase</span>
+              <span class="mw-tag">Auth &amp; roles</span><span class="mw-tag">Microservices</span>
+            </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-credit-card"></i></div>
+            <h3>Payments &amp; integrations</h3>
+            <p>Checkout, marketplace split payments, and the third-party services a product depends on.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Stripe</span><span class="mw-tag">Payment SDKs</span>
+              <span class="mw-tag">Multi-vendor checkout</span><span class="mw-tag">Split payouts</span>
+            </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-stars"></i></div>
+            <h3>AI &amp; machine learning</h3>
+            <p>AI applied to a real workflow — on-device vision as well as language models in the product flow.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">OpenAI</span><span class="mw-tag">Claude</span>
+              <span class="mw-tag">CoreML</span><span class="mw-tag">Vision</span>
+              <span class="mw-tag">OpenCV</span><span class="mw-tag">Real-time camera</span>
+            </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+            <h3>Cloud &amp; delivery</h3>
+            <p>Getting it live and keeping releases boring — containerised, deployed and repeatable.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">AWS</span><span class="mw-tag">ECS</span>
+              <span class="mw-tag">Docker</span><span class="mw-tag">CI/CD</span>
+              <span class="mw-tag">Fastlane</span>
+            </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-sliders"></i></div>
+            <h3>Admin &amp; operations</h3>
+            <p>The internal tools a business needs so the team isn't doing the software's job by hand.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Admin dashboards</span><span class="mw-tag">Vendor tooling</span>
+              <span class="mw-tag">Order workflows</span><span class="mw-tag">Analytics</span>
+            </div>
+          </div>
+
+          <div class="mw-cap">
+            <div class="mw-cap-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Security &amp; quality</h3>
+            <p>Secure access, sane release process, and crash and performance work once real traffic arrives.</p>
+            <div class="mw-tags">
+              <span class="mw-tag">Role-based access</span><span class="mw-tag">Biometric auth</span>
+              <span class="mw-tag">Crash &amp; performance</span><span class="mw-tag">Testing</span>
             </div>
           </div>
         </div>
@@ -329,9 +270,12 @@
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Highlights of my professional journey and achievements.</p>
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">Resume</span>
+          <h2>Twelve years, four regions, one consistent job</h2>
+          <p>Understand the product, design the system, build it, get it live, then keep improving it.</p>
+        </div>
       </div>
       <div class="container">
         <div class="row">
@@ -339,7 +283,8 @@
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Muhammad Waqas</h4>
-              <p><em>Lead Developer & Mobile Architect with 9 years in iOS and 3 years in Flutter, delivering 25 apps with 2 million downloads and $2 billion in transactions.</em></p>
+              <p><em>Senior full-stack &amp; product engineer with 12+ years building products end to end — mobile,
+                  web, backend, payments, AI integrations and cloud deployment.</em></p>
               <ul>
                 <li>Dubai, UAE</li>
                 <li>+971507957454</li>
@@ -357,7 +302,16 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Lead Developer & Mobile Architect</h4>
+              <h4>Senior Full-Stack &amp; Product Engineer</h4>
+              <h5>2024 - Present</h5>
+              <p><em>Independent — building products for founders and startups</em></p>
+              <ul>
+                <li>Built MarkitMix end to end: product flows, web and mobile, backend, payments and deployment.</li>
+                <li>Own the full lifecycle — architecture, build, launch, and production improvements.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Lead Developer &amp; Mobile Architect</h4>
               <h5>Oct 2021 - Present</h5>
               <p><em>Digital Dubai Authority, Dubai, UAE</em></p>
               <ul>
@@ -388,233 +342,283 @@
         </div>
         <div class="row">
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="resume-title">Projects</h3>
+            <h3 class="resume-title">Selected Projects</h3>
             <div class="resume-item">
-              <h4>Dubai Now Platform</h4>
-              <p>UAE's premier government services app with 2M+ users and 300+ services.</p>
+              <h4>MarkitMix — Multi-vendor marketplace</h4>
+              <p>Auctions, real-time bidding, Buy It Now, offers, payments, shipping and seller workflows across web
+                and mobile.</p>
               <ul>
-                <li>Led iOS development with Swift and SwiftUI.</li>
-                <li>Integrated $10M monthly payment gateways.</li>
+                <li>Product flows, frontend, backend, data model and multi-vendor checkout with split payments.</li>
+                <li>AI integrations (OpenAI, Claude) placed inside real seller and catalogue workflows.</li>
+                <li>Containerised and deployed to AWS/ECS; live at markitmix.shop and on iOS and Android.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>UAE PASS Mobile App</h4>
-              <p>Digital identity app reducing paper usage by 60%.</p>
+              <h4>Entrupy — Mobile authentication</h4>
+              <p>Real-time camera capture and on-device machine learning for product authentication.</p>
               <ul>
-                <li>Developed with Swift, integrated biometric authentication.</li>
+                <li>Swift, CoreML, Vision and OpenCV in a performance-sensitive capture experience.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>The Dubai Mall</h4>
-              <p>Official app for the world’s largest luxury mall with 1,300+ stores (<a href="https://apps.apple.com/us/app/the-dubai-mall/id430795858">App Store</a>).</p>
-              <ul>
-                <li>Maintained and fixed bugs, reducing issues by 35%.</li>
-                <li>Added functionalities, boosting engagement by 20%.</li>
-              </ul>
+              <h4>Emaar One — Real-estate &amp; lifestyle super-app</h4>
+              <p>Property and services management for residents, built in Swift against a large service backend.</p>
             </div>
             <div class="resume-item">
-              <h4>Emaar One</h4>
-              <p>Property management app with voice requests.</p>
-              <ul>
-                <li>Increased engagement by 40%, reduced crashes by 25%.</li>
-              </ul>
+              <h4>Dubai Mall — Retail companion app</h4>
+              <p>Companion app for one of the world's largest retail destinations.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Smiles, HealthHub, Reel Cinema, Buzdy, Baraka</h4>
+              <p>Super-app, healthcare, entertainment and fintech products across the UAE market.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Key projects showcasing my expertise in mobile development across diverse app categories.</p>
-      </div>
+    <!-- Featured Case Study -->
+    <section id="case-study" class="featured-case section">
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-ecommerce">E-commerce</li>
-            <li data-filter=".filter-rideshare">Ride-Sharing</li>
-            <li data-filter=".filter-health">Health & Fitness</li>
-            <li data-filter=".filter-food">Food Delivery</li>
-            <li data-filter=".filter-fintech">Fintech</li>
-            <li data-filter=".filter-education">Education</li>
-            <li data-filter=".filter-subscription">Subscription</li>
-            <li data-filter=".filter-ar">AI/ML</li>
-            <li data-filter=".filter-productivity">Productivity</li>
-          </ul>
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <!-- Existing portfolio items -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Dubai Now">
-                <div class="portfolio-info">
-                  <h4>Dubai Now</h4>
-                  <p>Government services platform with 2M+ users.</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="Dubai Now" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
+        <div class="fc-inner">
+          <div data-aos="fade-up">
+            <span class="fc-eyebrow"><i class="bi bi-stars"></i> Featured case study</span>
+            <h3>From an idea to a production marketplace</h3>
+            <p>
+              MarkitMix started as a product concept and is now a live multi-vendor marketplace. I owned the journey
+              across product thinking, frontend, backend, multi-vendor checkout and split payments, auctions, AI,
+              admin tooling and production deployment.
+            </p>
+            <div class="fc-stats">
+              <div><strong>50+</strong><span>Vendors supported by design</span></div>
+              <div><strong>Split payments</strong><span>One cart, many sellers</span></div>
+              <div><strong>Web · iOS · Android</strong><span>Live in production</span></div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-ecommerce">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="Emaar One">
-                <div class="portfolio-info">
-                  <h4>Emaar One</h4>
-                  <p>Manage your Emaar Properties anytime, from anywhere (<a href="https://apps.apple.com/ae/app/emaar-one/id1445056033">App Store</a>).</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="Emaar One" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-ecommerce">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="The Dubai Mall">
-                <div class="portfolio-info">
-                  <h4>The Dubai Mall</h4>
-                  <p>World's largest luxury mall app (<a href="https://apps.apple.com/us/app/the-dubai-mall/id430795858">App Store</a>).</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="The Dubai Mall" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-fintech">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-5.jpg" class="img-fluid" alt="UAE">
-                <div class="portfolio-info">
-                  <h4>UAE Pass</h4>
-                  <p>UAE PASS service allows using a mobile device as a secure form of identification (<a href="https://apps.apple.com/ae/app/uae-pass/id1377158818">App Store</a>).</p>
-                  <a href="assets/img/portfolio/app-5.jpg" title="UAE Pass" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            
-            
-            <!-- New category examples -->
-            <!-- Ride Sharing -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-rideshare">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/rideshare-1.jpg" class="img-fluid" alt="UAE">
-                <div class="portfolio-info">
-                  <h4>eKar</h4>
-                  <p>Car Rental and Ride-Hailing app (<a href="https://apps.apple.com/ae/app/ekar-car-rental/id1068848847">App Store</a>).</p>
-                  <a href="assets/img/portfolio/rideshare-1.jpg" title="eKar" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-rideshare">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/rideshare-2.jpg" class="img-fluid" alt="UAE">
-                <div class="portfolio-info">
-                  <h4>inDrive</h4>
-                  <p>inDrive, formerly known as inDriver, is a revolutionary ride-share application that boasts a presence in over 600 cities across 48 countries (<a href="https://apps.apple.com/us/app/indrive-save-on-city-rides/id780125801">App Store</a>).</p>
-                  <a href="assets/img/portfolio/rideshare-2.jpg" title="inDrive" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Health & Fitness -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-health">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/health-1.jpg" class="img-fluid" alt="Fitness App">
-                <div class="portfolio-info">
-                  <h4>FitCoach</h4>
-                  <p>Comprehensive fitness tracking with workout plans, nutrition monitoring, and real-time performance metrics (<a href="https://apps.apple.com/us/app/home-fitness-coach-fitcoach/id1438092960">App Store</a>).</p>
-                  <a href="assets/img/portfolio/health-1.jpg" title="FitCoach" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Food Delivery -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-food">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/food-1.jpg" class="img-fluid" alt="Food Delivery App">
-                <div class="portfolio-info">
-                  <h4>EatEasy</h4>
-                  <p>Food delivery platform with real-time order tracking, restaurant discovery, and personalized recommendations. (<a href="https://apps.apple.com/us/app/eateasy-order-food-grocery/id734231600?platform=iphone">App Store</a>)</p>
-                  <a href="assets/img/portfolio/food-1.jpg" title="EatEasy" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Education -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-education">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/edu-1.jpg" class="img-fluid" alt="Education App">
-                <div class="portfolio-info">
-                  <h4>Parent: Child Care App</h4>
-                  <p>Language learning app with interactive lessons, speech recognition, and progress tracking. (<a href="https://apps.apple.com/ae/app/parent-child-care-app/id1152401574?platform=iphone">App Store</a>)</p>
-                  <a href="assets/img/portfolio/edu-1.jpg" title="Parent: Child Care App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- AI/ML -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-ar">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-4.jpg" class="img-fluid" alt="UAE">
-                <div class="portfolio-info">
-                  <h4>Entrupy Luxury</h4>
-                  <p>The Entrupy Luxury app is the most accurate, scalable way to certify the authenticity of luxury products -- anytime, anywhere (<a href="https://apps.apple.com/us/app/entrupy-luxury/id1320190820">App Store</a>).</p>
-                  <a href="assets/img/portfolio/app-4.jpg" title="Entrupy Luxury" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Productivity -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-productivity">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/prod-1.jpg" class="img-fluid" alt="Productivity App">
-                <div class="portfolio-info">
-                  <h4>Noto - Elegant Note</h4>
-                  <p>Productivity tool with task management, note-taking, and calendar integration features (<a href="https://apps.apple.com/us/app/noto-elegant-note/id1459055246?platform=iphone">App Store</a>) </p>
-                  <a href="assets/img/portfolio/prod-1.jpg" title="Noto - Elegant Note" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
+            <a href="markitmix-case-study.html" class="cs-btn cs-btn-primary">Read the MarkitMix case study <i class="bi bi-arrow-right"></i></a>
+            <div class="cs-platforms">
+              <span class="cs-platforms-label">Live on</span>
+              <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> markitmix.shop</a>
+              <a href="https://apps.apple.com/us/app/markitmix-buy-sell-your-way/id6773596214" target="_blank" rel="noopener"><i class="bi bi-apple"></i> App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.markitmix.app" target="_blank" rel="noopener"><i class="bi bi-google-play"></i> Google Play</a>
             </div>
           </div>
+          <div data-aos="fade-left" data-aos-delay="150">
+            <a href="markitmix-case-study.html" style="display:block;text-decoration:none;">
+              <div class="cs-frame">
+                <div class="cs-frame-bar">
+                  <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+                  <span class="cs-frame-url">markitmix.shop — multi-vendor marketplace</span>
+                </div>
+                <div class="cs-frame-body">
+                  <img src="assets/img/markitmix/hero-home.jpg" alt="MarkitMix marketplace"
+                    onerror="this.parentElement.classList.add('cs-empty'); this.remove();">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="portfolio" class="portfolio section mw-section--dark">
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">Selected work</span>
+          <h2>Products that shipped and stayed shipped</h2>
+          <p>Marketplaces, super-apps, fintech, healthcare and AI-powered mobile products — built with teams in the
+            UAE, the US and the UK.</p>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="mw-work-grid">
+
+          <article class="mw-work mw-work--featured">
+            <div class="mw-work-media">
+              <span class="mw-work-badge">Case study</span>
+              <img src="assets/img/markitmix/hero-home.jpg" alt="MarkitMix marketplace">
+            </div>
+            <div class="mw-work-body">
+              <h3>MarkitMix</h3>
+              <p class="mw-work-industry">Marketplace / E-commerce</p>
+              <p>A multi-vendor marketplace with auctions, real-time bidding, Buy It Now, offers, payments,
+                shipping and seller workflows — live across web and mobile. I worked across the product end to end.</p>
+              <div class="mw-tags">
+                <span class="mw-tag">Swift</span><span class="mw-tag">SwiftUI</span><span class="mw-tag">Flutter</span>
+                <span class="mw-tag">Dart</span><span class="mw-tag">Firebase</span><span class="mw-tag">REST APIs</span>
+                <span class="mw-tag">Payment SDKs</span>
+              </div>
+              <div class="mw-work-links">
+                <a href="markitmix-case-study.html"><i class="bi bi-journal-text"></i> Read the case study</a>
+                <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Web</a>
+                <a href="https://apps.apple.com/us/app/markitmix-buy-sell-your-way/id6773596214" target="_blank" rel="noopener"><i class="bi bi-apple"></i> iOS</a>
+                <a href="https://play.google.com/store/apps/details?id=com.markitmix.app" target="_blank" rel="noopener"><i class="bi bi-google-play"></i> Android</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media">
+              <img src="assets/img/portfolio/app-4.jpg" alt="Entrupy">
+            </div>
+            <div class="mw-work-body">
+              <h3>Entrupy</h3>
+              <p class="mw-work-industry">Authentication / Retail</p>
+              <p>Mobile authentication app built around a real-time camera capture experience and on-device
+                machine learning.</p>
+              <div class="mw-tags">
+                <span class="mw-tag">Swift</span><span class="mw-tag">REST APIs</span><span class="mw-tag">CoreML</span>
+                <span class="mw-tag">Vision</span>
+              </div>
+              <div class="mw-work-links">
+                <a href="https://apps.apple.com/us/app/entrupy/id1320190820" target="_blank" rel="noopener"><i class="bi bi-apple"></i> App Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media">
+              <img src="assets/img/portfolio/app-2.jpg" alt="Emaar One">
+            </div>
+            <div class="mw-work-body">
+              <h3>Emaar One</h3>
+              <p class="mw-work-industry">Real Estate / Lifestyle</p>
+              <p>Real-estate and lifestyle super-app letting residents manage their property and services from one
+                place.</p>
+              <div class="mw-tags"><span class="mw-tag">Swift</span><span class="mw-tag">REST APIs</span></div>
+              <div class="mw-work-links">
+                <a href="https://apps.apple.com/ae/app/emaar-one/id1445056033" target="_blank" rel="noopener"><i class="bi bi-apple"></i> App Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media">
+              <img src="assets/img/portfolio/app-3.jpg" alt="The Dubai Mall">
+            </div>
+            <div class="mw-work-body">
+              <h3>Dubai Mall</h3>
+              <p class="mw-work-industry">Retail</p>
+              <p>Companion app for one of the world's largest retail destinations, used by visitors on site every
+                day.</p>
+              <div class="mw-tags"><span class="mw-tag">Swift</span><span class="mw-tag">REST APIs</span></div>
+              <div class="mw-work-links">
+                <a href="https://apps.apple.com/us/app/dubai-mall/id430795858" target="_blank" rel="noopener"><i class="bi bi-apple"></i> App Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media mw-work-media--mono"><span>SM</span></div>
+            <div class="mw-work-body">
+              <h3>Smiles</h3>
+              <p class="mw-work-industry">Super App</p>
+              <p>A single app covering food, groceries, home services, lifestyle and telecom — many business lines
+                behind one experience.</p>
+              <div class="mw-tags"><span class="mw-tag">Mobile</span><span class="mw-tag">REST APIs</span><span class="mw-tag">Payments</span></div>
+              <div class="mw-work-links">
+                <a href="https://smiles.ae/en/index.html" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> smiles.ae</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media mw-work-media--mono"><span>RC</span></div>
+            <div class="mw-work-body">
+              <h3>Reel Cinema</h3>
+              <p class="mw-work-industry">Entertainment</p>
+              <p>Cinema booking app — seat selection, showtimes and ticketing.</p>
+              <div class="mw-tags"><span class="mw-tag">Swift</span><span class="mw-tag">REST APIs</span></div>
+              <div class="mw-work-links">
+                <a href="https://play.google.com/store/apps/details?id=com.reelCinema.Screens&hl=en" target="_blank" rel="noopener"><i class="bi bi-google-play"></i> Google Play</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media mw-work-media--mono"><span>HH</span></div>
+            <div class="mw-work-body">
+              <h3>HealthHub</h3>
+              <p class="mw-work-industry">Healthcare</p>
+              <p>Healthcare platform connecting patients with clinical services and records.</p>
+              <div class="mw-tags"><span class="mw-tag">Mobile</span><span class="mw-tag">REST APIs</span></div>
+              <div class="mw-work-links">
+                <a href="https://www.healthhubalfuttaim.com/" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> healthhubalfuttaim.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media mw-work-media--mono"><span>BZ</span></div>
+            <div class="mw-work-body">
+              <h3>Buzdy</h3>
+              <p class="mw-work-industry">Fintech</p>
+              <p>Fintech product where money movement, trust and correctness matter more than anything on screen.</p>
+              <div class="mw-tags"><span class="mw-tag">Fintech</span><span class="mw-tag">Payments</span></div>
+              <div class="mw-work-links">
+                <a href="https://buzdy.com/" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> buzdy.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mw-work">
+            <div class="mw-work-media mw-work-media--mono"><span>BK</span></div>
+            <div class="mw-work-body">
+              <h3>Baraka</h3>
+              <p class="mw-work-industry">Fintech</p>
+              <p>Investing product built for a regulated, consumer-facing financial experience.</p>
+              <div class="mw-tags"><span class="mw-tag">Fintech</span><span class="mw-tag">Mobile</span></div>
+              <div class="mw-work-links">
+                <a href="https://getbaraka.com/" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> getbaraka.com</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Comprehensive mobile development and architecture services.</p>
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">How I can help</span>
+          <h2>Ways founders usually bring me in</h2>
+          <p>Whether you have a sketch, a half-built product, or something live that has outgrown its first
+            version.</p>
+        </div>
       </div>
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">iOS Development</a></h4>
-              <p class="description">Expertise in Swift, SwiftUI, and Objective-C for robust iOS apps.</p>
-            </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="mw-service-grid">
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-rocket-takeoff"></i></div>
+            <h3>Idea to MVP</h3>
+            <p>Shape the product, cut it down to what actually needs to exist first, then build and launch it.</p>
           </div>
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Flutter Development</a></h4>
-              <p class="description">Cross-platform solutions with Dart and state management.</p>
-            </div>
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-shop"></i></div>
+            <h3>Marketplaces &amp; commerce</h3>
+            <p>Multi-vendor catalogues, auctions and bidding, checkout, and payments that reach the right seller.</p>
           </div>
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Mobile Architecture</a></h4>
-              <p class="description">Scalable, secure architectures with microservices.</p>
-            </div>
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-phone"></i></div>
+            <h3>Mobile product development</h3>
+            <p>Native iOS or Flutter apps, from architecture through to App Store and Play Store release.</p>
+          </div>
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-stars"></i></div>
+            <h3>AI inside the product</h3>
+            <p>OpenAI, Claude and on-device vision applied to a workflow that costs your team real time today.</p>
+          </div>
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-life-preserver"></i></div>
+            <h3>Rescue &amp; rework</h3>
+            <p>Take over an existing codebase, stabilise it, and get it back to a state where shipping is normal.</p>
+          </div>
+          <div class="mw-service">
+            <div class="mw-cap-icon"><i class="bi bi-diagram-3"></i></div>
+            <h3>Architecture &amp; technical direction</h3>
+            <p>Decide the structure, integrations and deployment path before they become expensive to change.</p>
           </div>
         </div>
       </div>
@@ -622,9 +626,13 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Get in touch for collaboration or inquiries.</p>
+      <div class="container" data-aos="fade-up">
+        <div class="mw-head">
+          <span class="mw-eyebrow">Contact</span>
+          <h2>Have an idea, an MVP, or a product that needs to become real?</h2>
+          <p>Tell me what you're building and where it's stuck. I'll tell you honestly whether I'm the right person
+            for it.</p>
+        </div>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
