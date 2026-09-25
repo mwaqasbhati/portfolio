@@ -60,10 +60,10 @@
       <div class="cs-hero-grid">
         <div>
           <span class="cs-eyebrow cs-eyebrow-accent">Case Study · MarkitMix · Multi-vendor marketplace</span>
-          <h1>From an Idea to a <em>Production Marketplace</em></h1>
+          <h1>I built MarkitMix from an idea into a <em>production marketplace</em>.</h1>
           <p class="cs-hero-sub">
-            How I helped turn MarkitMix from a product concept into a live multi-vendor marketplace — owning the
-            product journey across frontend, backend, payments, integrations, infrastructure and production.
+            Web, mobile, backend, payments, shipping, auctions, seller tools and cloud infrastructure — built across
+            the product lifecycle by one product/full-stack engineer.
           </p>
 
           <div class="cs-hero-ctas">
@@ -91,6 +91,29 @@
           </div>
           <p class="cs-caption">The live MarkitMix marketplace — auctions, buy it now and offers in one place.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 00 QUICK OWNERSHIP ============ -->
+  <section class="cs-section cs-section--light" id="ownership-quick">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal" style="margin-bottom:34px;">
+        <span class="cs-eyebrow">What I actually owned</span>
+        <h2 class="cs-h2">What was in my scope</h2>
+        <p class="cs-lead">
+          Product understanding, architecture, web, mobile, backend, database, payments, integrations, AI,
+          admin/vendor tooling, deployment and production support. The rest of this case study shows concrete examples.
+        </p>
+      </div>
+
+      <div class="cs-own cs-reveal">
+        <div class="cs-own-item"><div><strong>Product understanding</strong><span>Business rules before interface decisions.</span></div></div>
+        <div class="cs-own-item"><div><strong>Architecture</strong><span>Data and service boundaries for a multi-vendor model.</span></div></div>
+        <div class="cs-own-item"><div><strong>Web + mobile</strong><span>Buyer, seller and admin experiences.</span></div></div>
+        <div class="cs-own-item"><div><strong>Backend + database</strong><span>Order, listing, auction and vendor state.</span></div></div>
+        <div class="cs-own-item"><div><strong>Payments + integrations</strong><span>Marketplace checkout, Stripe and shipping workflows.</span></div></div>
+        <div class="cs-own-item"><div><strong>Deployment + production</strong><span>Docker, AWS/ECS, CI/CD and live operations.</span></div></div>
       </div>
     </div>
   </section>
@@ -149,11 +172,10 @@
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
         <span class="cs-eyebrow">02 — Turning the idea into a product</span>
-        <h2 class="cs-h2">Turning requirements into real product flows</h2>
+        <h2 class="cs-h2">Three journeys, one shared system</h2>
         <p class="cs-lead">
-          Before writing features, the product was broken into the three journeys that actually generate value. A
-          marketplace only works when these three loops connect — a vendor listing has to become something a customer
-          can find, buy and receive, and something an operator can see and support.
+          Customer, vendor and admin flows were designed together because one action in one flow changes the others.
+          The key was keeping those dependencies explicit in the product and backend rules.
         </p>
       </div>
 
@@ -163,16 +185,13 @@
           <h4>Customer journey</h4>
           <div class="cs-pipeline">
             <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
-              <div class="cs-pipe-body"><h4>Discover &amp; browse</h4><p>Find products across every vendor in one catalogue.</p></div>
+              <div class="cs-pipe-body"><h4>Discover</h4><p>Browse a shared catalogue across all vendors.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
-              <div class="cs-pipe-body"><h4>Product &amp; auction</h4><p>Buy at a fixed price or place a bid on a live listing.</p></div>
+              <div class="cs-pipe-body"><h4>Choose format</h4><p>Buy it now, offer, or bid in auction flow.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
-              <div class="cs-pipe-body"><h4>Cart &amp; checkout</h4><p>One cart, even when the items come from different sellers.</p></div>
-            </div>
-            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
-              <div class="cs-pipe-body"><h4>Payment &amp; order</h4><p>One payment, correctly attributed behind the scenes.</p></div>
+              <div class="cs-pipe-body"><h4>Checkout</h4><p>One cart and payment, split correctly behind the scenes.</p></div>
             </div>
           </div>
         </div>
@@ -182,16 +201,13 @@
           <h4>Vendor journey</h4>
           <div class="cs-pipeline">
             <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
-              <div class="cs-pipe-body"><h4>Register &amp; onboard</h4><p>Become an approved seller on the platform.</p></div>
+              <div class="cs-pipe-body"><h4>Onboard</h4><p>Register, connect account, configure storefront basics.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
-              <div class="cs-pipe-body"><h4>Products &amp; listings</h4><p>Create, price and maintain their own catalogue.</p></div>
+              <div class="cs-pipe-body"><h4>List inventory</h4><p>Create listings, schedule drops, run auction or fixed-price sales.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
-              <div class="cs-pipe-body"><h4>Auctions</h4><p>Put items up for bidding and follow them to close.</p></div>
-            </div>
-            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
-              <div class="cs-pipe-body"><h4>Orders &amp; business</h4><p>Receive orders and run their storefront day to day.</p></div>
+              <div class="cs-pipe-body"><h4>Operate</h4><p>Manage orders, fulfilment, ledger and storefront activity.</p></div>
             </div>
           </div>
         </div>
@@ -201,25 +217,21 @@
           <h4>Admin journey</h4>
           <div class="cs-pipeline">
             <div class="cs-pipe-item"><span class="cs-pipe-dot">1</span>
-              <div class="cs-pipe-body"><h4>Monitor marketplace</h4><p>See what is happening across the whole platform.</p></div>
+              <div class="cs-pipe-body"><h4>Monitor</h4><p>Track listing, order and seller activity across the marketplace.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">2</span>
-              <div class="cs-pipe-body"><h4>Manage vendors</h4><p>Approve, review and support the sellers on board.</p></div>
+              <div class="cs-pipe-body"><h4>Manage vendors</h4><p>Approve sellers and resolve operational issues.</p></div>
             </div>
             <div class="cs-pipe-item"><span class="cs-pipe-dot">3</span>
-              <div class="cs-pipe-body"><h4>Products &amp; orders</h4><p>Step in when a listing or an order needs attention.</p></div>
-            </div>
-            <div class="cs-pipe-item"><span class="cs-pipe-dot">4</span>
-              <div class="cs-pipe-body"><h4>Platform activity</h4><p>Keep marketplace operations under control.</p></div>
+              <div class="cs-pipe-body"><h4>Control state</h4><p>Keep product, order and payment state consistent and visible.</p></div>
             </div>
           </div>
         </div>
       </div>
 
       <p class="cs-lead cs-reveal" style="margin-top:44px;max-width:780px;">
-        The goal was never a set of isolated screens. Every step above hands something to the next one — a vendor
-        action changes what a customer sees, a customer action creates work for a vendor, and the admin view has to
-        reflect both at any moment.
+        The important pattern was always the same: customer action → backend rule → vendor action → payment state →
+        fulfilment state → admin visibility.
       </p>
     </div>
   </section>
@@ -355,19 +367,24 @@
             for something nobody is fulfilling.
           </p>
 
-          <h3 class="cs-h3" style="margin-top:34px;">What I designed and built</h3>
+          <h3 class="cs-h3" style="margin-top:34px;">Decision and implementation</h3>
           <p style="color:#a8bad2;">
             I designed and implemented the multi-vendor checkout and split-payment flow: cart items resolved back to
             their vendors, orders derived per vendor from a single purchase, and payment distribution handled as part
             of the order lifecycle instead of as a manual back-office chore. The flow was designed to operate with
             <strong style="color:#fff;">50+ vendors</strong> on the platform.
           </p>
-          <div class="cs-chiprow" style="margin-top:22px;">
-            <span class="cs-chip">Cart → vendor resolution</span>
-            <span class="cs-chip">Per-vendor order creation</span>
-            <span class="cs-chip">Single customer payment</span>
-            <span class="cs-chip">Split distribution</span>
-          </div>
+
+          <h3 class="cs-h3" style="margin-top:30px;">Stripe marketplace payment flow</h3>
+          <p style="color:#a8bad2;">
+            This was not a basic checkout button integration. The system had to align seller account connection,
+            vendor-specific order state, payment attribution, and post-payment order lifecycle handling so finance and
+            fulfilment stayed in sync.
+          </p>
+          <p style="color:#a8bad2; margin-bottom:0;">
+            Edge conditions such as partial fulfilment changes or order adjustments were treated as payment-state
+            problems as much as order-state problems.
+          </p>
         </div>
 
         <div class="cs-split-visual">
@@ -391,11 +408,50 @@
     </div>
   </section>
 
-  <!-- ============ 05 AUCTIONS ============ -->
+  <!-- ============ 05 SMART SHIPPING ============ -->
+  <section class="cs-section cs-section--light" id="shipping-bundling">
+    <div class="cs-wrap">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-eyebrow">05 — Smart shipping</span>
+        <h2 class="cs-h2">One seller. Multiple purchases. One smarter shipment.</h2>
+        <p class="cs-lead">
+          A buyer may purchase multiple products from the same seller. Treating each item as an independent shipment
+          increases cost and operational overhead for both sides.
+        </p>
+      </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal" style="align-items:start;gap:44px;">
+        <div class="cs-split-visual">
+          <div class="cs-split-row">
+            <div class="cs-node"><strong>Without bundling</strong><small>Each item creates a separate shipment flow</small></div>
+            <div class="cs-node"><strong>Item A → shipment</strong><small>Seller-level handling repeated</small></div>
+            <div class="cs-node"><strong>Item B → shipment</strong><small>Extra operational steps</small></div>
+            <div class="cs-node"><strong>Item C → shipment</strong><small>Higher shipping cost exposure</small></div>
+          </div>
+        </div>
+
+        <div class="cs-split-visual">
+          <div class="cs-split-row">
+            <div class="cs-node cs-node--accent"><strong>With MarkitMix bundling</strong><small>Items evaluated within seller context</small></div>
+            <div class="cs-node"><strong>Item A + Item B + Item C</strong><small>Same seller / eligible items</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>Combined shipment flow</strong><small>Lower friction for buyer and seller</small></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-lead cs-reveal" style="margin-top:34px;max-width:820px;">
+        This mattered commercially as well as technically: better checkout economics, cleaner operations, and fewer
+        avoidable fulfilment decisions for sellers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 06 AUCTIONS ============ -->
   <section class="cs-section cs-section--light" id="auctions">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">05 — Auctions</span>
+        <span class="cs-eyebrow">06 — Auctions</span>
         <h2 class="cs-h2">From marketplace listings to live auctions</h2>
         <p class="cs-lead">
           Auctions were not a side feature. They gave vendors a second way to sell and gave the marketplace a reason
@@ -431,14 +487,48 @@
         </div>
         <p class="cs-caption">Auctions, buy-it-now, drops and flash sales running side by side, each with clear timing and fulfilment options.</p>
       </div>
+
+      <div class="cs-grid cs-grid-2 cs-reveal" style="margin-top:44px;align-items:start;gap:44px;">
+        <div>
+          <h3 class="cs-h3">Under the hood: keeping bids consistent</h3>
+          <p>
+            The difficult part was not showing a countdown. The difficult part was state consistency when bids arrive
+            close together.
+          </p>
+          <p>
+            The system had to validate each incoming bid against the latest auction state, decide whether it is
+            accepted, update the live state, and persist that state so the eventual winner and order creation are
+            unambiguous.
+          </p>
+          <p style="margin-bottom:0;">
+            This is where engineering discipline matters: stale state and race conditions can create false winners,
+            broken trust and payment disputes.
+          </p>
+        </div>
+
+        <div class="cs-split-visual">
+          <div class="cs-split-row">
+            <div class="cs-node"><strong>Buyer A</strong><small>Places bid</small></div>
+            <div class="cs-node"><strong>Buyer B</strong><small>Places near-simultaneous bid</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>API</strong><small>Receives and validates each request</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>Bid validation layer</strong><small>Checks current auction state before update</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node"><strong>Live update</strong><small>Publishes accepted state changes</small></div>
+            <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="cs-node cs-node--accent"><strong>Persistence</strong><small>Writes authoritative auction state to database</small></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 06 CONTROL CENTER ============ -->
+  <!-- ============ 07 CONTROL CENTER ============ -->
   <section class="cs-section cs-section--soft" id="control-center">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">06 — The business control center</span>
+        <span class="cs-eyebrow">07 — The business control center</span>
         <h2 class="cs-h2">Building the tools behind the marketplace</h2>
         <p class="cs-lead">
           A marketplace is not the website customers see. Most of the work of running one happens in the tools nobody
@@ -447,7 +537,7 @@
         </p>
       </div>
 
-      <div class="cs-grid cs-grid-3 cs-reveal" style="margin-bottom:44px;">
+      <div class="cs-grid cs-grid-3 cs-reveal" style="margin-bottom:28px;">
         <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-people"></i></div><h4>Vendor management</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Onboard, review and manage the sellers operating on the platform.</p></div>
         <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-grid-3x3-gap"></i></div><h4>Product oversight</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Keep the catalogue accurate across every vendor contributing to it.</p></div>
         <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-bag-check"></i></div><h4>Order management</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Follow orders through their lifecycle and intervene when needed.</p></div>
@@ -456,20 +546,37 @@
         <div class="cs-card"><div class="cs-card-icon"><i class="bi bi-arrow-repeat"></i></div><h4>Business workflows</h4><p style="font-size:14.5px;color:var(--cs-muted);margin:0;">Turn recurring manual work into something the system handles.</p></div>
       </div>
 
+      <div class="cs-reveal" style="margin-bottom:34px;">
+        <div class="cs-frame cs-frame--tall">
+          <div class="cs-frame-bar">
+            <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
+            <span class="cs-frame-url">markitmix.shop — seller dashboard</span>
+          </div>
+          <div class="cs-frame-body">
+            <img data-shot data-shot-name="vendor-dashboard.jpg" class="cs-shot--left"
+              src="assets/img/markitmix/vendor-dashboard.jpg"
+              alt="MarkitMix seller dashboard with listings, orders, finances and analytics">
+          </div>
+        </div>
+        <p class="cs-caption">The seller dashboard — listings, drops, orders, ledger, Stripe account connection, analytics and bulk inventory import.</p>
+      </div>
+
+      <div class="cs-flow cs-reveal" style="margin-bottom:34px;">
+        <div class="cs-flow-step"><span class="cs-step-n">01</span><strong>Create listing</strong><span class="cs-step-note">Add items and listing details.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">02</span><strong>Manage inventory</strong><span class="cs-step-note">Update stock and catalogue state.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">03</span><strong>Schedule / drop</strong><span class="cs-step-note">Control timing and visibility.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">04</span><strong>Auction or sell</strong><span class="cs-step-note">Run listing in chosen sales format.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">05</span><strong>Receive order</strong><span class="cs-step-note">Order appears with seller context.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">06</span><strong>Fulfil</strong><span class="cs-step-note">Handle delivery and order progress.</span></div>
+        <div class="cs-flow-step"><span class="cs-step-n">07</span><strong>Track financial activity</strong><span class="cs-step-note">Ledger and account visibility.</span></div>
+      </div>
+
       <div class="cs-grid cs-grid-2 cs-reveal">
         <div>
-          <div class="cs-frame">
-            <div class="cs-frame-bar">
-              <span class="cs-dot"></span><span class="cs-dot"></span><span class="cs-dot"></span>
-              <span class="cs-frame-url">markitmix.shop — seller dashboard</span>
-            </div>
-            <div class="cs-frame-body">
-              <img data-shot data-shot-name="vendor-dashboard.jpg" class="cs-shot--left"
-                src="assets/img/markitmix/vendor-dashboard.jpg"
-                alt="MarkitMix seller dashboard with listings, orders, finances and analytics">
-            </div>
-          </div>
-          <p class="cs-caption">The seller dashboard — listings, drops, orders, ledger, Stripe account connection, analytics and bulk inventory import.</p>
+          <p class="cs-lead" style="max-width:100%;margin:0;">
+            The buyer-facing storefront is only one part of the product. Seller and operations tooling carries much of
+            the day-to-day marketplace load.
+          </p>
         </div>
         <div>
           <div class="cs-frame">
@@ -488,37 +595,35 @@
     </div>
   </section>
 
-  <!-- ============ 07 AI ============ -->
+  <!-- ============ 08 AI ============ -->
   <section class="cs-section cs-section--dark" id="ai">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">07 — AI where it adds value</span>
+        <span class="cs-eyebrow">08 — AI where it adds value</span>
         <h2 class="cs-h2">AI as part of the product — not just a chatbot</h2>
         <p class="cs-lead">
-          AI was introduced into MarkitMix where it removed real friction from a workflow, using OpenAI and Claude.
-          Every integration had to answer the same question first: what would a person otherwise have to do manually,
-          and is a model genuinely better at it?
+          AI was introduced where it removed real workflow friction, using OpenAI and Claude. The bar was practical:
+          if it did not save real manual effort in a product flow, it stayed out.
         </p>
       </div>
 
       <div class="cs-grid cs-grid-2 cs-reveal">
         <div class="cs-card">
-          <div class="cs-card-icon"><i class="bi bi-pencil-square"></i></div>
-          <h4>Helping vendors create better listings</h4>
+          <h4>Listing assistance in the seller workflow</h4>
           <div class="cs-par">
-            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Sellers are good at sourcing products, not at writing product copy — so listings arrive thin and inconsistent.</p></div>
-            <div class="cs-par-row"><span class="cs-par-label">Why AI</span><p>Turning a few facts about an item into clear, consistent listing content is exactly what language models do well.</p></div>
-            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">In product</span><p>Built into the listing workflow itself, so the vendor gets help at the moment they are creating the item — with the vendor still in control of the final text.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Listings were often thin or inconsistent when sellers were entering them quickly.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Input</span><p>Seller-provided item details from the listing form.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Model output</span><p>Structured copy suggestions and clearer product wording.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">Control</span><p>The seller remains in control and decides what is published.</p></div>
           </div>
         </div>
 
         <div class="cs-card">
-          <div class="cs-card-icon"><i class="bi bi-search-heart"></i></div>
-          <h4>Making a mixed catalogue easier to navigate</h4>
+          <h4>Catalog consistency across many vendors</h4>
           <div class="cs-par">
-            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>When 50+ vendors describe products in their own words, browsing and searching becomes uneven for the customer.</p></div>
-            <div class="cs-par-row"><span class="cs-par-label">Why AI</span><p>Models can interpret messy, free-form product information and bring structure to it at scale.</p></div>
-            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">In product</span><p>Applied inside the catalogue flow so customers get a more coherent marketplace without vendors changing how they work.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Problem</span><p>Catalogue quality drifts when many sellers describe similar items differently.</p></div>
+            <div class="cs-par-row"><span class="cs-par-label">Why AI</span><p>Language models can help normalize and structure free-form product information.</p></div>
+            <div class="cs-par-row cs-par-row--result"><span class="cs-par-label">In product</span><p>Applied in catalogue flows to improve customer-side consistency without forcing sellers into rigid manual editing.</p></div>
           </div>
         </div>
       </div>
@@ -530,11 +635,11 @@
     </div>
   </section>
 
-  <!-- ============ 08 TO PRODUCTION ============ -->
+  <!-- ============ 09 TO PRODUCTION ============ -->
   <section class="cs-section cs-section--light" id="production">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">08 — From local development to production</span>
+        <span class="cs-eyebrow">09 — From local development to production</span>
         <h2 class="cs-h2">Getting the product live</h2>
         <p class="cs-lead">
           A product that only runs on a laptop is not a product. Getting MarkitMix in front of real vendors and
@@ -552,6 +657,20 @@
         <div class="cs-flow-step"><span class="cs-step-n">07</span><strong>Production</strong><span class="cs-step-note">Live, reachable, and used by real people.</span></div>
       </div>
 
+      <div class="cs-split-visual cs-reveal" style="margin-bottom:34px;">
+        <div class="cs-split-row">
+          <div class="cs-node"><strong>GitHub</strong><small>Source + review</small></div>
+          <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+          <div class="cs-node"><strong>CI/CD</strong><small>Build + release automation</small></div>
+          <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+          <div class="cs-node"><strong>Docker</strong><small>Consistent runtime package</small></div>
+          <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+          <div class="cs-node"><strong>AWS / ECS</strong><small>Managed container deployment</small></div>
+          <div class="cs-arrow-down"><i class="bi bi-arrow-down"></i></div>
+          <div class="cs-node cs-node--accent"><strong>Health checks + live traffic</strong><small>Production feedback loop</small></div>
+        </div>
+      </div>
+
       <div class="cs-narrow cs-reveal" style="width:100%;max-width:820px;margin-left:0;">
         <h3 class="cs-h3">What this meant in practice</h3>
         <p style="color:var(--cs-muted);">
@@ -567,11 +686,11 @@
     </div>
   </section>
 
-  <!-- ============ 09 THE PRODUCT TODAY ============ -->
+  <!-- ============ 10 THE PRODUCT TODAY ============ -->
   <section class="cs-section cs-section--dark" id="today">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">09 — The product today</span>
+        <span class="cs-eyebrow">10 — The product today</span>
         <h2 class="cs-h2">This isn't just a demo. It's a live product.</h2>
         <p class="cs-lead">
           MarkitMix is live at <a href="https://www.markitmix.shop/en" target="_blank" rel="noopener"
@@ -629,15 +748,15 @@
     </div>
   </section>
 
-  <!-- ============ 10 WHAT I OWNED ============ -->
+  <!-- ============ 11 WHAT I OWNED ============ -->
   <section class="cs-section cs-section--light" id="ownership">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">10 — What I actually owned</span>
-        <h2 class="cs-h2">More than writing the code</h2>
+        <span class="cs-eyebrow">11 — Scope recap</span>
+        <h2 class="cs-h2">Ownership across product and engineering</h2>
         <p class="cs-lead">
-          I worked as a full-stack/product engineer across the entire product lifecycle — from understanding what the
-          business needed, through building it, to keeping it running once it was real.
+          The scope stayed cross-functional throughout the lifecycle: product decisions, system decisions, build
+          decisions and production decisions.
         </p>
       </div>
 
@@ -657,21 +776,19 @@
     </div>
   </section>
 
-  <!-- ============ 11 WHAT I LEARNED ============ -->
+  <!-- ============ 12 WHAT CHANGED MY APPROACH ============ -->
   <section class="cs-section cs-section--dark" id="learned">
     <div class="cs-wrap">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-eyebrow">11 — What I learned</span>
-        <h2 class="cs-h2">What building MarkitMix taught me</h2>
+        <span class="cs-eyebrow">12 — What this changed in my approach</span>
+        <h2 class="cs-h2">How MarkitMix shaped product decisions</h2>
       </div>
 
       <div class="cs-grid cs-grid-2 cs-reveal">
-        <div class="cs-lesson"><h4>A marketplace is much more than a storefront.</h4><p>The visible shop is the small part. The business rules connecting buyers, sellers and money are the product.</p></div>
-        <div class="cs-lesson"><h4>Business rules need designing before they become code.</h4><p>Decisions made casually early on become expensive to unwind once vendors and orders depend on them.</p></div>
-        <div class="cs-lesson"><h4>Multi-vendor payments are a product decision, not just an engineering one.</h4><p>How money splits, when it moves and who is accountable shapes the architecture as much as the code does.</p></div>
-        <div class="cs-lesson"><h4>Operational tooling matters as much as the customer experience.</h4><p>Without good admin and vendor tools, the team becomes the missing feature — manually.</p></div>
-        <div class="cs-lesson"><h4>AI should solve a workflow problem, not exist for its own sake.</h4><p>The useful integrations were the ones that replaced tedious work people were already doing.</p></div>
-        <div class="cs-lesson"><h4>Getting an MVP live is only the beginning.</h4><p>Real usage exposes the problems actually worth solving — the ones you could never have prioritised from a spec.</p></div>
+        <div class="cs-lesson"><h4>Business rules before UI.</h4><p>Marketplace behavior, payment attribution and fulfilment rules need clear design before interface polish.</p></div>
+        <div class="cs-lesson"><h4>Payments and order state are one system.</h4><p>Checkout logic, payout logic and operational tooling must be designed together.</p></div>
+        <div class="cs-lesson"><h4>Operational tooling is product work.</h4><p>Seller and admin workflows are part of core product quality, not back-office extras.</p></div>
+        <div class="cs-lesson"><h4>Production feedback changes priorities.</h4><p>Once live, real usage quickly surfaces the engineering decisions that matter most.</p></div>
       </div>
     </div>
   </section>
@@ -681,10 +798,10 @@
     <div class="cs-wrap">
       <div class="cs-reveal">
         <span class="cs-eyebrow cs-eyebrow-accent">Let's build yours</span>
-        <h2>Have an idea, MVP, or product that needs to become real?</h2>
+        <h2>If you're building an early-stage product and need ownership across the stack, let's talk.</h2>
         <p class="cs-lead" style="max-width:720px;">
-          I help founders turn product ideas into production-ready software — from early product thinking and
-          architecture through full-stack development, integrations, AI, deployment and ongoing improvement.
+          For founders with an idea, MVP or existing product: support is available across product understanding, web,
+          mobile, backend, integrations, payments and production delivery.
         </p>
         <div class="cs-hero-ctas" style="margin-top:34px;">
           <a href="index.html#contact" class="cs-btn cs-btn-primary">Let's talk about your product <i class="bi bi-arrow-right"></i></a>
