@@ -26,6 +26,29 @@
 
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/markitmix.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.GA_MEASUREMENT_ID = 'G-3XW7TPY3D7';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = window.gtag || gtag;
+    gtag('js', new Date());
+
+    // Load GA only when a valid measurement ID is configured.
+    if (/^G-[A-Z0-9]+$/i.test(window.GA_MEASUREMENT_ID)) {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(window.GA_MEASUREMENT_ID);
+      document.head.appendChild(gaScript);
+
+      var params = new URLSearchParams(window.location.search);
+      gtag('config', window.GA_MEASUREMENT_ID, {
+        anonymize_ip: true,
+        debug_mode: params.get('debug_mode') === '1'
+      });
+    }
+  </script>
 </head>
 
 <!--
@@ -821,15 +844,181 @@
 
   <script>
     (function () {
+      var hasGtag = typeof window.gtag === 'function';
+      var urlParams = new URLSearchParams(window.location.search);
+      var sectionSeen = {};
+      var scrollMilestones = { 25: false, 50: false, 75: false, 90: false };
+
+      function utmContext() {
+        return {
+          utm_source: urlParams.get('utm_source') || undefined,
+          utm_medium: urlParams.get('utm_medium') || undefined,
+          utm_campaign: urlParams.get('utm_campaign') || undefined,
+          utm_content: urlParams.get('utm_content') || undefined,
+          utm_term: urlParams.get('utm_term') || undefined,
+          utm_id: urlParams.get('utm_id') || undefined
+        };
+      }
+
+      function track(eventName, params) {
+        if (!hasGtag) return;
+        window.gtag('event', eventName, Object.assign({}, utmContext(), params || {}));
+      }
+
+      function hostFromHref(href) {
+        try { return new URL(href, window.location.href).hostname; }
+        catch (_) { return ''; }
+      }
+
+      function pathFromHref(href) {
+        try { return new URL(href, window.location.href).pathname; }
+        catch (_) { return href || ''; }
+      }
+
+      function isExternalLink(anchor) {
+        try {
+          var target = new URL(anchor.href, window.location.href);
+          return target.origin !== window.location.origin;
+        } catch (_) {
+          return false;
+        }
+      }
+
+      function isPdfLink(anchor) {
+        return /\.pdf($|\?)/i.test(anchor.getAttribute('href') || '');
+      }
+
+      function isDemoLikeLink(anchor) {
+        var href = (anchor.getAttribute('href') || '').toLowerCase();
+        return /youtube\.com|youtu\.be|vimeo\.com|loom\.com|\/demo(\/|$)|#demo/.test(href);
+      }
+
+      function classifyCta(anchor) {
+        var href = anchor.getAttribute('href') || '';
+        var text = (anchor.textContent || '').trim().toLowerCase();
+        var section = anchor.closest('section');
+        var location = section ? (section.id || section.className || 'unknown') : 'unknown';
+        var destination = hostFromHref(anchor.href) || pathFromHref(anchor.href);
+
+        if (href.indexOf('markitmix.shop') !== -1 || text.indexOf('markitmix live') !== -1 || text.indexOf('visit markitmix') !== -1) {
+          return { cta_name: 'view_live_product', cta_location: location, destination: destination };
+        }
+
+        if (href.indexOf('index.html#contact') !== -1 || href === '#talk' || text.indexOf("let's talk") !== -1 || text.indexOf('contact') !== -1) {
+          return { cta_name: 'contact_me', cta_location: location, destination: destination };
+        }
+
+        if (href.indexOf('linkedin.com') !== -1) {
+          return { cta_name: 'linkedin_contact', cta_location: location, destination: destination };
+        }
+
+        return null;
+      }
+
+      // Track meaningful case-study page view (separate from GA page_view)
+      track('case_study_view', {
+        page_type: 'markitmix_case_study',
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+
       // Reading-progress bar
       var bar = document.getElementById('csProgress');
       function progress() {
         var h = document.documentElement;
         var max = h.scrollHeight - h.clientHeight;
-        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+        var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+        bar.style.width = pct + '%';
+
+        // One-time scroll milestone events
+        if (pct >= 25 && !scrollMilestones[25]) { scrollMilestones[25] = true; track('scroll_25', { scroll_percent: 25 }); }
+        if (pct >= 50 && !scrollMilestones[50]) { scrollMilestones[50] = true; track('scroll_50', { scroll_percent: 50 }); }
+        if (pct >= 75 && !scrollMilestones[75]) { scrollMilestones[75] = true; track('scroll_75', { scroll_percent: 75 }); }
+        if (pct >= 90 && !scrollMilestones[90]) { scrollMilestones[90] = true; track('scroll_90', { scroll_percent: 90 }); }
       }
       document.addEventListener('scroll', progress, { passive: true });
       progress();
+
+      // Track section visibility once per page view
+      var sectionMap = {
+        'hero': '.cs-hero',
+        'problem': '#starting-point',
+        'product_journey': '#journeys',
+        'marketplace': '#build',
+        'multi_vendor_checkout': '#checkout',
+        'auctions': '#auctions',
+        'admin': '#control-center',
+        'ai': '#ai',
+        'deployment': '#production',
+        'production': '#today',
+        'final_cta': '#talk'
+      };
+
+      if ('IntersectionObserver' in window) {
+        var sectionObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.intersectionRatio < 0.35) return;
+            var name = entry.target.getAttribute('data-section-name');
+            if (sectionSeen[name]) return;
+            sectionSeen[name] = true;
+            track('section_view', { section_name: name });
+          });
+        }, { threshold: [0.35, 0.6] });
+
+        Object.keys(sectionMap).forEach(function (name) {
+          var el = document.querySelector(sectionMap[name]);
+          if (!el) return;
+          el.setAttribute('data-section-name', name);
+          sectionObserver.observe(el);
+        });
+      }
+
+      // Link + CTA + external click tracking
+      document.addEventListener('click', function (evt) {
+        var anchor = evt.target.closest && evt.target.closest('a[href]');
+        if (!anchor) return;
+
+        var href = anchor.getAttribute('href') || '';
+        var absoluteDestination = hostFromHref(anchor.href) || pathFromHref(anchor.href);
+
+        var cta = classifyCta(anchor);
+        if (cta) {
+          track('cta_click', cta);
+          if (cta.cta_name === 'view_live_product') {
+            track('live_product_click', {
+              cta_location: cta.cta_location,
+              destination: cta.destination
+            });
+          }
+          if (cta.cta_name === 'contact_me' || cta.cta_name === 'linkedin_contact') {
+            track('contact_link_click', {
+              cta_location: cta.cta_location,
+              destination: cta.destination
+            });
+          }
+        }
+
+        if (isDemoLikeLink(anchor)) {
+          track('demo_click', {
+            destination: absoluteDestination,
+            link_text: (anchor.textContent || '').trim().slice(0, 80)
+          });
+        }
+
+        if (isPdfLink(anchor)) {
+          track('download_click', {
+            file_type: 'pdf',
+            destination: absoluteDestination
+          });
+        }
+
+        if (isExternalLink(anchor)) {
+          track('external_link_click', {
+            destination: absoluteDestination,
+            link_text: (anchor.textContent || '').trim().slice(0, 80)
+          });
+        }
+      }, { passive: true });
 
       // Reveal on scroll
       var items = document.querySelectorAll('.cs-reveal');
